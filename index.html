@@ -5,6 +5,10 @@
       display: flex;
       flex-direction: column;
     }
+    textarea {
+      width: 75%;
+      height: 33%;
+    }
   </style>
 
   <head>
@@ -16,14 +20,14 @@
     <script src="./bootstrap.js"></script>
 
     <center>
-    <div id="stuff">
+    <div id="stuff" style="height: 90vh">
       <p>Plaintext</p>
-      <textarea id="encrypt"></textarea>
+      <textarea id="plaintext"></textarea>
       <p>Key</p>
       <input id="key" type="text">
-      <input type="button" value="Do it!" id="do_it_button">
+      <input type="button" value="Convert" id="do_it_button" disabled >
       <p>Ciphertext</p>
-      <textarea id="decrypt" /></textarea>
+      <textarea id="ciphertext" /></textarea>
     </div>
     </center>
   </body>

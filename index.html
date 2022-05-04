@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Easy-crypt</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Fira+Code">
+    <!--Analytics-->
+    <script data-goatcounter="https://desmondwillowbrookblog.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+  </head>
+
   <style>
+    html {
+      font-family: 'Fira Code', serif;
+    }
+
     .stuff {
       display: flex;
       flex-direction: column;
@@ -9,20 +24,40 @@
       width: 75%;
       height: 33%;
     }
+
+    @media (prefers-color-scheme: dark) {
+      textarea {
+        background-color: #2b2a33;
+        color: whitesmoke;
+      }
+
+      input {
+        background-color: #2b2a33;
+        font-family: 'Fira Code', serif;
+        color: whitesmoke;
+      }
+
+      body {
+        background-color: #181a1b;
+        color: whitesmoke;
+      }
+
+      a:visited {
+        color: rgb(190, 152, 253);
+      }
+    }
   </style>
 
-  <head>
-    <meta charset="utf-8">
-    <title>Easy-crypt</title>
-    <!--Analytics-->
-    <script data-goatcounter="https://desmondwillowbrookblog.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-  </head>
   <body>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
     <script src="./bootstrap.js"></script>
 
     <center>
+    <ul>
+      <li>When encrypting, write in "Plaintext", enter key and then click Encrypt.</li>
+      <li>When decrypting, pase in "Ciphertext", enter key and then click Decrypt.</li>
+    </ul>
+
     <div id="stuff" style="height: 90vh">
       <p>Plaintext</p>
       <textarea id="plaintext"></textarea>
@@ -32,7 +67,16 @@
       <p>Ciphertext</p>
       <textarea id="ciphertext" /></textarea>
     </div>
-    <footer><a href="https://github.com/DesmondWillowbrook/easy-crypt">GitHub Page</a> <br> Made by <a href="https://github.com/DesmondWillowbrook" alt="link to github profile">DesmondWillowbrook</a> using Rust, WASM, wasm-pack, and much more.</footer>
     </center>
+    <footer>
+      <a href="https://github.com/DesmondWillowbrook/easy-crypt"><picture>
+          <source media="(prefers-color-scheme: light)" srcset="gh-mark-light.png">
+          <source media="(prefers-color-scheme: dark)" srcset="gh-mark-dark.png">
+          <img>
+        </picture>GitHub Page</a>
+        <br> Made by <a href="https://github.com/DesmondWillowbrook" alt="link to github profile">DesmondWillowbrook</a>
+        using Rust, WASM, wasm-pack, and much more.
+    </footer>
   </body>
+ 
 </html>

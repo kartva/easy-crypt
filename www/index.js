@@ -6,12 +6,16 @@ let key = document.getElementById("key");
 let button = document.getElementById("do_it_button");
 
 button.onclick = () => {
-	if (pl.value != "") {
-		cp.value = wasm.encrypt (pl.value, key.value);
-	} else if (cp.value != "") {
-		pl.value = wasm.decrypt (cp.value, key.value);
-	} else {
-		alert("Both Plaintext and Ciphertext fields are blank!");
+	try {
+		if (pl.value != "") {
+			cp.value = wasm.encrypt (pl.value, key.value);
+		} else if (cp.value != "") {
+			pl.value = wasm.decrypt (cp.value, key.value);
+		} else {
+			alert("Both Plaintext and Ciphertext fields are blank!");
+		}
+	} catch (error) {
+		alert("Error converting. Are you sure you copy-pasted correctly?");
 	}
 }
 

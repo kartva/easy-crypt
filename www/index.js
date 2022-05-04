@@ -5,6 +5,25 @@ let cp = document.getElementById("ciphertext");
 let key = document.getElementById("key");
 let button = document.getElementById("do_it_button");
 
+let example_encrypt = document.getElementById("enc_button");
+let example_decrypt = document.getElementById("dec_button");
+
+example_encrypt.onclick = () => {
+	pl.value = "a very special incredibly long-winded barely relevant secret";
+	cp.value = "";
+	key.value = "a secret key";
+	button.disabled = false;
+	button.value = "Encrypt";
+}
+
+example_decrypt.onclick = () => {
+	pl.value = "";
+	cp.value = "uhyfPJ2/+DBosbZkURSQi+NTOtrWInP6nIM0hOBXP7xCeX7XojRLE8Q8ZLhZAwRswoouHZl20nvdyi/FUsonVg==";
+	key.value = "a secret key";
+	button.disabled = false;
+	button.value = "Decrypt";
+}
+
 button.onclick = () => {
 	try {
 		if (pl.value != "") {

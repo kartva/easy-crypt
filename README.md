@@ -1,5 +1,5 @@
 # Easy-crypt
-Hosted at https://desmondwillowbrook.github.io/easy-crypt/
+Hosted at [https://desmondwillowbrook.github.io/easy-crypt/](https://kartva.github.io/easy-crypt/)
 
 A probably not-secure website built in an afternoon (and I really do mean _one_) to keep text secret.
 
